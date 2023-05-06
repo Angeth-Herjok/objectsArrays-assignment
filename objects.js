@@ -4,14 +4,13 @@
 function reverseArray(arrays){
         arrays.reverse();
         arrays.sort();
-        let elementDescendingIndex = [0, 2, 4]; 
+        let elementDescendingIndex = [1, 2, 3]; 
         for (let index of elementDescendingIndex) {
           if (arrays[index]) {
             arrays[index] = arrays[index].split("").reverse().join("");
           }
         }
         return arrays;
-
 }
 console.log(reverseArray["hello","becky","school","akirachix","nairobi"]);
 // Given an array of objects, each object representing a person with a name and age property,
@@ -46,14 +45,28 @@ function arrayChecking(nums){
         }
         else if(nums[i]<0){
             answer=-1
+            break;
         }
     }  
     return answer
 }
 
-console.log(arrayChecking([3,5,0,-7,-4]));
+console.log(arrayChecking([3,5,0,1,6]));
 
 
 // Given an array of objects, where each object represents an employee with an id, name, 
 // and salary property, write a function that returns a new array of employee objects 
 // sorted by their salary in ascending order.
+let name = [
+    { id: 30, name: "Betty", salary: 3500 },
+    { id: 20, name: "Herjok", salary: 4000 },
+    { id: 50, name: "John", salary: 2560 },
+    { id: 40, name: "Anne", salary: 4500 }
+  ];
+function sortEmployeesNames(name){
+
+    let sortedEmployeesNames = name.sort((x, y) => x.salary - y.salary);
+        return sortedEmployeesNames;
+      }
+      const sortedEmployeesNames = sortEmployeesNames(name);
+      console.log(sortedEmployeesNames);
