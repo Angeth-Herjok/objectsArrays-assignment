@@ -13,6 +13,7 @@ function reverseArray(arrays){
         return arrays;
 }
 console.log(reverseArray["hello","becky","school","akirachix","nairobi"]);
+
 // Given an array of objects, each object representing a person with a name and age property,
 // write a function that returns the sum of all people who are less than 18 years.
 const people = [
@@ -45,7 +46,10 @@ function arrayChecking(nums){
         }
         else if(nums[i]<0){
             answer=-1
-            break;
+        
+        }
+        else{
+            return zero
         }
     }  
     return answer
